@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        >
+    <!--
+    如果给一个子view设置了weight属性，则该view会按照设置的百分比来控制该view的大小，
+    除去该view所占的空间的百分比，其他的空余空间会为空。
+    LinearLayout 中如果不设置android:weightSum属性，
+    则其weight的总值为所有子view的weight的值加起来的和。
+    如果设置了weightSum则其子view的会按照比例进行大小的缩放。
+    如果需要三个子view按照百分比分配大小的话，可以将weightSum设置为100，
+    子view只要设置为100以内并且加和小于100就是按照百分比来控制大小了。
+    -->
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="A"
+            />
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:text="A"
+            />
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="A"
+            />
+
+</LinearLayout>
